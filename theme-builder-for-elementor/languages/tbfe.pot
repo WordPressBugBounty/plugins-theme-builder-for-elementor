@@ -1,0 +1,848 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Theme Builder For Elementor\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-25 11:25+0100\n"
+"PO-Revision-Date: 2019-11-07 16:20+0200\n"
+"Last-Translator: \n"
+"Language-Team: Blocks WP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lib/elementor/installers.php:28 lib/elementor/installers.php:36
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: lib/elementor/installers.php:40 lib/elementor/installers.php:45
+msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: lib/elementor/options.php:22
+msgid "Page Header"
+msgstr ""
+
+#: lib/elementor/options.php:29
+msgid "Page Content"
+msgstr ""
+
+#: lib/elementor/options.php:36
+msgid "Page Footer"
+msgstr ""
+
+#: lib/elementor/options.php:53
+msgid "Post Header"
+msgstr ""
+
+#: lib/elementor/options.php:60
+msgid "Post Content"
+msgstr ""
+
+#: lib/elementor/options.php:67
+msgid "Post Footer"
+msgstr ""
+
+#: lib/elementor/options.php:84
+msgid "Archive Header"
+msgstr ""
+
+#: lib/elementor/options.php:91
+msgid "Elementor Archive"
+msgstr ""
+
+#: lib/elementor/options.php:98
+msgid "Elementor Archive Layout"
+msgstr ""
+
+#: lib/elementor/options.php:105
+msgid "Elementor Archive Sidebar"
+msgstr ""
+
+#: lib/elementor/options.php:112
+msgid "Archive Footer"
+msgstr ""
+
+#: lib/elementor/options.php:129
+msgid "404 Header"
+msgstr ""
+
+#: lib/elementor/options.php:136
+msgid "Elementor 404 Page"
+msgstr ""
+
+#: lib/elementor/options.php:143
+msgid "404 Footer"
+msgstr ""
+
+#: lib/elementor/options.php:157 lib/elementor/options.php:201
+#: lib/elementor/options.php:245 lib/elementor/options.php:312
+msgid "Select header"
+msgstr ""
+
+#: lib/elementor/options.php:171 lib/elementor/options.php:259
+#: lib/elementor/options.php:282
+msgid "Select page"
+msgstr ""
+
+#: lib/elementor/options.php:185 lib/elementor/options.php:229
+#: lib/elementor/options.php:296 lib/elementor/options.php:340
+msgid "Select footer"
+msgstr ""
+
+#: lib/elementor/options.php:215
+msgid "Select post"
+msgstr ""
+
+#: lib/elementor/options.php:271
+msgid "Boxed"
+msgstr ""
+
+#: lib/elementor/options.php:272
+msgid "Full Width"
+msgstr ""
+
+#: lib/elementor/options.php:326
+msgid "Select 404 page"
+msgstr ""
+
+#: lib/elementor/options.php:368
+#, php-format
+msgid "There was a problem installing or activating the theme. Try it again or do it manually. %1$s Documentation how to install The Blocks theme manually. %2$s"
+msgstr ""
+
+#: lib/elementor/options.php:372
+msgid "The theme has been installed, excellent!"
+msgstr ""
+
+#: lib/elementor/options.php:380
+msgid "Demo layouts imported!"
+msgstr ""
+
+#: lib/elementor/options.php:391
+msgid "Welcome to Theme Builder For Elementor"
+msgstr ""
+
+#: lib/elementor/options.php:392
+msgid "Plugin to style your website with Elementor. Style your website design without any limitation."
+msgstr ""
+
+#: lib/elementor/options.php:397
+msgid "One more step"
+msgstr ""
+
+#: lib/elementor/options.php:398
+msgid "Install and activate our theme - The Blocks"
+msgstr ""
+
+#: lib/elementor/options.php:400
+msgid "Why The Blocks?"
+msgstr ""
+
+#: lib/elementor/options.php:401
+msgid "The Theme Builder For Elementor is built to work with any theme, however there are many ways how to develop the theme and we can not support all of them."
+msgstr ""
+
+#: lib/elementor/options.php:402
+msgid "To ensure that this plugin works correctly, install and activate The Blocks theme"
+msgstr ""
+
+#: lib/elementor/options.php:405
+msgid "Main theme features:"
+msgstr ""
+
+#: lib/elementor/options.php:407
+msgid "Lightweight & safe - only 8kb size. It is super small and fast."
+msgstr ""
+
+#: lib/elementor/options.php:408
+msgid "Coded with all WordPress coding standards"
+msgstr ""
+
+#: lib/elementor/options.php:409
+#, php-format
+msgid "100% suported by this plugin"
+msgstr ""
+
+#: lib/elementor/options.php:410
+msgid "Fully customizable with this plugin - Header, Footer, Posts, Pages, Archives..."
+msgstr ""
+
+#: lib/elementor/options.php:413
+msgid "Click the button below to automatically install and activate The Blocks theme."
+msgstr ""
+
+#: lib/elementor/options.php:421
+msgid "Demo Import"
+msgstr ""
+
+#: lib/elementor/options.php:422
+msgid "Import our Elementor demo layouts (Elementor headers, footers, posts & pages, ...) is the easiest way to create your own design. Click the button below, to import demo layouts."
+msgstr ""
+
+#: lib/elementor/options.php:430
+msgid "How to?"
+msgstr ""
+
+#: lib/elementor/options.php:431
+msgid "Using Theme Builder For Elementor is simple and easy."
+msgstr ""
+
+#: lib/elementor/options.php:436
+#, php-format
+msgid "1. Create and style section(s) with Elementor (or import with our demo importer) under %1$s Theme Builder - Header %2$s (Footer, 404 page...)"
+msgstr ""
+
+#: lib/elementor/options.php:442
+#, php-format
+msgid "2. Once the sections are created, go to %1$s Theme Builder - Settings %2$s, select tab (Post, Page, Archive...) where you want display the sections and set them."
+msgstr ""
+
+#: lib/elementor/options.php:446
+msgid "3. Save your choices and check the result."
+msgstr ""
+
+#: lib/elementor/options.php:449
+msgid "Still not lucky? Visit our "
+msgstr ""
+
+#: lib/elementor/options.php:449 lib/elementor/options.php:496
+msgid "doucmentation page"
+msgstr ""
+
+#: lib/elementor/options.php:462
+msgid "Theme Builder For Elementor Options"
+msgstr ""
+
+#: lib/elementor/options.php:468
+msgid "Welcome"
+msgstr ""
+
+#: lib/elementor/options.php:469
+msgid "Pages"
+msgstr ""
+
+#: lib/elementor/options.php:470
+msgid "Posts"
+msgstr ""
+
+#: lib/elementor/options.php:471 lib/elementor/sections/module.php:122
+#: lib/elementor/sections/module.php:123
+msgid "Archive"
+msgstr ""
+
+#: lib/elementor/options.php:472
+msgid "404"
+msgstr ""
+
+#: lib/elementor/options.php:496
+msgid "Are you lost? Visit our "
+msgstr ""
+
+#: lib/elementor/sections/module.php:27 lib/elementor/sections/module.php:28
+msgid "Header"
+msgstr ""
+
+#: lib/elementor/sections/module.php:29
+msgid "Add New Header"
+msgstr ""
+
+#: lib/elementor/sections/module.php:46 lib/elementor/sections/module.php:47
+msgid "Footer"
+msgstr ""
+
+#: lib/elementor/sections/module.php:48
+msgid "Add New Footer"
+msgstr ""
+
+#: lib/elementor/sections/module.php:65 lib/elementor/sections/module.php:66
+msgid "404 Page"
+msgstr ""
+
+#: lib/elementor/sections/module.php:67
+msgid "Add New 404 Page"
+msgstr ""
+
+#: lib/elementor/sections/module.php:84 lib/elementor/sections/module.php:85
+msgid "Post"
+msgstr ""
+
+#: lib/elementor/sections/module.php:86
+msgid "Add New Post"
+msgstr ""
+
+#: lib/elementor/sections/module.php:103 lib/elementor/sections/module.php:104
+msgid "Page"
+msgstr ""
+
+#: lib/elementor/sections/module.php:105
+msgid "Add New Page"
+msgstr ""
+
+#: lib/elementor/sections/module.php:124
+msgid "Add New Archive"
+msgstr ""
+
+#: lib/elementor/sections/module.php:141 lib/elementor/sections/module.php:142
+msgid "Archive Sidebar"
+msgstr ""
+
+#: lib/elementor/sections/module.php:143
+msgid "Add New Archive Sidebar"
+msgstr ""
+
+#: lib/elementor/shortcode.php:26
+msgid "Shortcode"
+msgstr ""
+
+#: lib/elementor/widgets.php:99
+msgid "Blog & Archive Layout"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:49
+msgid "Post author"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:93
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:169
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:95
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:166
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:95
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:164
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:48
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:93
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:100
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:136
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:94
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:176
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:240
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:96
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:172
+msgid "Content"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:98
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:108
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:101
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:100
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:111
+msgid "Text before"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:100
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:101
+msgid "Author:"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:106
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:109
+msgid "Text Spacing"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:120
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:116
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:115
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:124
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:192
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:120
+msgid "Icon"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:132
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:129
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:127
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:138
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:201
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:133
+msgid "Icon Position"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:136
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:133
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:131
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:142
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:205
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:137
+msgid "Before"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:137
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:134
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:132
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:143
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:206
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:138
+msgid "After"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:147
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:144
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:142
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:154
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:217
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:149
+msgid "Icon Spacing"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:176
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:173
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:171
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:144
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:184
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:152
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:154
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:136
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:180
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:103
+msgid "Alignment"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:181
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:177
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:175
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:148
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:188
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:156
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:158
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:140
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:184
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:107
+msgid "Left"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:185
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:181
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:179
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:152
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:192
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:160
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:162
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:144
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:188
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:111
+msgid "Center"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:189
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:185
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:183
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:156
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:196
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:164
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:166
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:148
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:192
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:115
+msgid "Right"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:209
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:296
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:292
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:198
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:261
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:268
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:257
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:312
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:144
+msgid "Normal"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:215
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:233
+msgid "Author Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:227
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:314
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:310
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:218
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:295
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:303
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:332
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:164
+msgid "Hover"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-author.php:248
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:217
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:213
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:173
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:210
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:275
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:310
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:169
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:263
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:281
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:299
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:225
+msgid "Text Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:51
+msgid "Post categories"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:101
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:103
+msgid "Separator"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:110
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:111
+msgid "Categories:"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:201
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:197
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:140
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:207
+msgid "Text"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:236
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:354
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:232
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:340
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:366
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:361
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:197
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:353
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:246
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:376
+msgid "Border Radius"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:254
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:372
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:250
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:358
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:381
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:215
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:371
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:266
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:396
+msgid "Padding"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:266
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:384
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:262
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:370
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:227
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:383
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:279
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:409
+msgid "Margin"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:279
+msgid "Categories"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:302
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:320
+msgid "Category Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-categories.php:334
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:333
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:354
+msgid "Separator Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:51
+msgid "Post comments"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:108
+msgid "Comments Off text"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:275
+msgid "Comments"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:298
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:316
+msgid "Comment Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:430
+#: lib/elementor/widgets/posts-pages/blog-feed-comments.php:449
+msgid "Comment on "
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:104
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:112
+msgid "Excerpt"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:105
+msgid "Full Content"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:160
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:170
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:119
+msgid "Justified"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:205
+#: lib/elementor/widgets/posts-pages/blog-feed-content.php:225
+msgid "Links Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:49
+msgid "Post date"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:102
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:103
+msgid "Published"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-date.php:230
+msgid "Date Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:51
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:110
+msgid "Featured Image"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:117
+msgid "Choose Dummy Image"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:119
+msgid "Dummy image is for development purposes. It will be replaced with the correct post or page thumbnail."
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:128
+msgid "Use as default image?"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:129
+msgid "Use this dummy image as default image, if there is no featured image defined."
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:132
+msgid "Yes"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:133
+msgid "No"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:141
+msgid "Image Size"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:182
+msgid "Image"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:190
+msgid "Width"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:225
+msgid "Max Width"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:268
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:302
+msgid "Opacity"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:328
+msgid "Transition Duration"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-image.php:345
+msgid "Hover Animation"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:51
+msgid "Read More Button"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:97
+msgid "Extra Small"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:98
+msgid "Small"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:99
+msgid "Medium"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:100
+msgid "Large"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:101
+msgid "Extra Large"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:117
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:249
+msgid "Button"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:124
+msgid "Type"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:127
+msgid "Default"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:128
+msgid "Info"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:129
+msgid "Success"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:130
+msgid "Warning"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:131
+msgid "Danger"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:145
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:146
+msgid "Click here"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:181
+msgid "Size"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:237
+msgid "View"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:286
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:321
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:178
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:313
+msgid "Background Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-read-more.php:332
+msgid "Border Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:50
+msgid "Sidebar & Widgets"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:97
+msgid "No sidebars were found"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:99
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:117
+msgid "Choose Sidebar"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:112
+msgid "Sidebar"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:129
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:95
+msgid "Title"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:275
+msgid "Links"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-sidebar.php:293
+msgid "Links Hover"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:51
+msgid "Post tags"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:113
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:114
+msgid "Tags:"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:293
+msgid "Tags"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:319
+#: lib/elementor/widgets/posts-pages/blog-feed-tags.php:339
+msgid "Tag Color"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:48
+msgid "Post title"
+msgstr ""
+
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:151
+#: lib/elementor/widgets/posts-pages/blog-feed-title.php:171
+msgid "Title Color"
+msgstr ""
+
+#: lib/metabox.php:17 lib/metabox.php:18
+msgid "Theme Builder Custom Options"
+msgstr ""
+
+#: lib/metabox.php:57
+msgid "Elementor Options"
+msgstr ""
+
+#: lib/metabox.php:61 lib/metabox.php:121
+msgid "Custom Elementor Header"
+msgstr ""
+
+#: lib/metabox.php:68 lib/metabox.php:88 lib/metabox.php:108
+#: lib/metabox.php:128 lib/metabox.php:148 lib/metabox.php:168
+msgid "Default from global options"
+msgstr ""
+
+#: lib/metabox.php:81
+msgid "Custom Elementor Page"
+msgstr ""
+
+#: lib/metabox.php:101 lib/metabox.php:161
+msgid "Custom Elementor Footer"
+msgstr ""
+
+#: lib/metabox.php:141
+msgid "Custom Elementor Post"
+msgstr ""
+
+#: theme-builder-for-elementor.php:88
+msgid "Sidebar #1"
+msgstr ""
+
+#: theme-builder-for-elementor.php:98
+msgid "Sidebar #2"
+msgstr ""
+
+#: theme-builder-for-elementor.php:108
+msgid "Sidebar #3"
+msgstr ""
+
+#: theme-builder-for-elementor.php:153
+msgid "Theme Builder For Elementor is enabled but not effective. It requires Elementor in order to work."
+msgstr ""
