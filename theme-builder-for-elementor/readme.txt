@@ -1,9 +1,9 @@
 === Theme Builder For Elementor ===
 Contributors: theblockswp
 Requires at least: 4.9
-Tested up to: 6.4
+Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: elementor, theme builder, elementor widget, demo import
@@ -75,26 +75,33 @@ This is free plugin that will help you develop your sites. The Elementor PRO the
 
 == Changelog ==
 
-= 1.2.1 =
+= 1.2.4 =
+- Tested with WP 6.7
+- Tested with Elementor 3.25
+
+= 1.2.3 =
+- Added function to flush permalinks after update to avoid content editor errors.
+
+= 1.2.2 =
 - Tested with WP 6.4
-- Tested with Elementor 5.17
+- Tested with Elementor 3.17
 
 = 1.2.1 =
 - Tested with WP 6.3
-- Tested with Elementor 5.16
+- Tested with Elementor 3.16
 - Removed deprecated code
 
 = 1.2.0 =
 - Tested with WP 6.1
-- Tested with Elementor 5.8
+- Tested with Elementor 3.8
 - Removed deprecated code
 
 = 1.1.1 =
 - Tested with WP 6.0
-- Tested with Elementor 5.7
+- Tested with Elementor 3.7
 
 = 1.1.0 =
-- Added support for Elementor 5.6
+- Added support for Elementor 3.6
 - Tested with WP 5.9
 
 = 1.0.2 =

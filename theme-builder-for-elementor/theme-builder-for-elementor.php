@@ -3,13 +3,13 @@
  * Plugin Name: Theme Builder For Elementor
  * Plugin URI: https://blocks-wp.com/theme-builder-for-elementor/
  * Description: Theme Builder For Elementor
- * Version: 1.2.2
+ * Version: 1.2.3
  * Author: Blocks WP
  * Author URI: https://blocks-wp.com/
  * License: GPL-2.0+
  * WC requires at least: 3.3.0
- * WC tested up to: 8.3
- * Elementor tested up to: 3.17.0
+ * WC tested up to: 9.4
+ * Elementor tested up to: 3.25.0
  */
 // Exit if accessed directly.
 if (!defined('ABSPATH')) {
@@ -85,34 +85,34 @@ function tbfe_is_elementor() {
  */
 function tbfe_widgets_init() {
     register_sidebar(
-            array(
-                'name' => esc_html__('Sidebar #1', 'tbfe'),
-                'id' => 'tbfe-sidebar-1',
-                'before_widget' => '<div id="%1$s" class="widget %2$s">',
-                'after_widget' => '</div>',
-                'before_title' => '<div class="widgettitle"><h3>',
-                'after_title' => '</h3></div>',
-            )
+		array(
+			'name' => esc_html__('Sidebar #1', 'tbfe'),
+			'id' => 'tbfe-sidebar-1',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<div class="widgettitle"><h3>',
+			'after_title' => '</h3></div>',
+		)
     );
     register_sidebar(
-            array(
-                'name' => esc_html__('Sidebar #2', 'tbfe'),
-                'id' => 'tbfe-sidebar-2',
-                'before_widget' => '<div id="%1$s" class="widget %2$s">',
-                'after_widget' => '</div>',
-                'before_title' => '<div class="widgettitle"><h3>',
-                'after_title' => '</h3></div>',
-            )
+		array(
+			'name' => esc_html__('Sidebar #2', 'tbfe'),
+			'id' => 'tbfe-sidebar-2',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<div class="widgettitle"><h3>',
+			'after_title' => '</h3></div>',
+		)
     );
     register_sidebar(
-            array(
-                'name' => esc_html__('Sidebar #3', 'tbfe'),
-                'id' => 'tbfe-sidebar-3',
-                'before_widget' => '<div id="%1$s" class="widget %2$s">',
-                'after_widget' => '</div>',
-                'before_title' => '<div class="widgettitle"><h3>',
-                'after_title' => '</h3></div>',
-            )
+		array(
+			'name' => esc_html__('Sidebar #3', 'tbfe'),
+			'id' => 'tbfe-sidebar-3',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<div class="widgettitle"><h3>',
+			'after_title' => '</h3></div>',
+		)
     );
 }
 
@@ -130,6 +130,25 @@ function tbfe_activate() {
 register_activation_hook(__FILE__, 'tbfe_activate');
 
 add_action('admin_init', 'tbfe_plugin_redirect');
+
+function tbfe_flush_update_permalinks($upgrader_object, $options) {
+
+	// The path to our plugin's main file
+	$our_plugin = plugin_basename( __FILE__ );
+	// If an update has taken place and the updated type is plugins and the plugins element exists
+	if( $options['action'] == 'update' && $options['type'] == 'plugin' && isset( $options['plugins'] ) ) {
+	 // Iterate through the plugins being updated and check if ours is there
+	 foreach( $options['plugins'] as $plugin ) {
+	  if( $plugin == $our_plugin ) {
+	   flush_rewrite_rules();
+	   break;
+	  }
+	 }
+	}
+
+}
+
+add_action( 'upgrader_process_complete', 'tbfe_flush_update_permalinks', 10, 2 );
 
 /**
  * Redirect after plugin activation

@@ -43,6 +43,9 @@ class TBFE_Shortcode {
         if (empty($attributes['id'])) {
             return '';
         }
+		if (get_post_status ($attributes['id']) != 'publish') {
+            return '';
+        }
 
         $response = Plugin::instance()->frontend->get_builder_content_for_display($attributes['id']);
         return $response;
