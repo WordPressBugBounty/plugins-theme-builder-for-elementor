@@ -349,12 +349,17 @@ function tbfe_select_elementor_404_footer() {
 
 add_action('admin_init', 'tbfe_theme_import');
 function tbfe_theme_import() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
     // after submit action
-    if ( isset( $_POST['tbfe_theme_install']) && $_POST['tbfe_theme_install'] == 'true' && is_admin() ) {
+    if ( isset( $_POST['tbfe_theme_install']) && $_POST['tbfe_theme_install'] == 'true' && is_admin() &&
+        check_admin_referer('tbfe_theme_install_action', 'tbfe_theme_nonce') ) {
         tbfe_plugin_fire();
         add_action( 'admin_notices', 'tbfe_theme_notice' );
     }
-    if ( isset( $_POST['header-import']) && $_POST['header-import'] == 'true' && is_admin() ) {
+    if ( isset( $_POST['header-import']) && $_POST['header-import'] == 'true' && is_admin() &&
+        check_admin_referer('tbfe_theme_import_action', 'tbfe_import_nonce') ) {
         add_action( 'admin_notices', 'tbfe_theme_notice' );
     }
 }
@@ -412,6 +417,7 @@ function tbfe_theme_info_page() {
             </p>
             <p><?php esc_html_e( 'Click the button below to automatically install and activate The Blocks theme.', 'tbfe' ); ?><br /></p>
             <form action="" method="post">
+				<?php wp_nonce_field('tbfe_theme_install_action', 'tbfe_theme_nonce'); ?>
               <input type="hidden" name="tbfe_theme_install" value="true">
               <?php submit_button('Install and activate', 'secondary'); ?>
             </form>
@@ -421,6 +427,7 @@ function tbfe_theme_info_page() {
             <h3><?php esc_html_e( 'Demo Import', 'tbfe' ); ?></h3>
             <?php esc_html_e( 'Import our Elementor demo layouts (Elementor headers, footers, posts & pages, ...) is the easiest way to create your own design. Click the button below, to import demo layouts.', 'tbfe' ); ?><br />
             <form method="POST" action="">
+				<?php wp_nonce_field('tbfe_theme_import_action', 'tbfe_import_nonce'); ?>
                 <input type="hidden" name="header-import" value="true" />
                 <?php submit_button('Import Data', 'primary'); ?>
 

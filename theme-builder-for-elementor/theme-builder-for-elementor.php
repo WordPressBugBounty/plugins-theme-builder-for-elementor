@@ -3,13 +3,13 @@
  * Plugin Name: Theme Builder For Elementor
  * Plugin URI: https://blocks-wp.com/theme-builder-for-elementor/
  * Description: Theme Builder For Elementor
- * Version: 1.2.3
+ * Version: 1.2.5
  * Author: Blocks WP
  * Author URI: https://blocks-wp.com/
  * License: GPL-2.0+
  * WC requires at least: 3.3.0
- * WC tested up to: 9.4
- * Elementor tested up to: 3.25.0
+ * WC tested up to: 9.9
+ * Elementor tested up to: 3.30.0
  */
 // Exit if accessed directly.
 if (!defined('ABSPATH')) {

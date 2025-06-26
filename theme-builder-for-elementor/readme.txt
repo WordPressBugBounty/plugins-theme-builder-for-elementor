@@ -1,9 +1,9 @@
 === Theme Builder For Elementor ===
 Contributors: theblockswp
 Requires at least: 4.9
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: elementor, theme builder, elementor widget, demo import
@@ -74,6 +74,11 @@ No. The plugin is built for free Elementor plugin. Elementor PRO is not required
 This is free plugin that will help you develop your sites. The Elementor PRO theme builder is a paid plugin of Elementor. Elementor PRO theme builder is not compatible with this plugin. Use only one theme builder, do not combine them.
 
 == Changelog ==
+
+= 1.2.5 =
+- Tested with WP 6.8
+- Security Update
+- Tested with Elementor 3.30
 
 = 1.2.4 =
 - Tested with WP 6.7
