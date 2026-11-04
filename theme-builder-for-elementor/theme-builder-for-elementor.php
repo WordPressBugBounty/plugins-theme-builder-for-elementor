@@ -1,181 +1,39 @@
 <?php
-/*
- * Plugin Name: Theme Builder For Elementor
- * Plugin URI: https://blocks-wp.com/theme-builder-for-elementor/
- * Description: Theme Builder For Elementor
- * Version: 1.2.5
- * Author: Blocks WP
- * Author URI: https://blocks-wp.com/
- * License: GPL-2.0+
- * WC requires at least: 3.3.0
- * WC tested up to: 9.9
- * Elementor tested up to: 3.30.0
- */
-// Exit if accessed directly.
-if (!defined('ABSPATH')) {
-    exit;
-}
-
-if (!function_exists('add_action')) {
-    die('Nothing to do...');
-}
-
-$plugin_data = get_file_data(__FILE__, array('Version' => 'Version'), false);
-$plugin_version = $plugin_data['Version'];
-// Define TBFE_PRO_CURRENT_VERSION.
-if (!defined('TBFE_PRO_CURRENT_VERSION')) {
-    define('TBFE_PRO_CURRENT_VERSION', $plugin_version);
-}
-
-//plugin constants
-define('TBFE_PRO_PATH', plugin_dir_path(__FILE__));
-define('TBFE_PRO_PLUGIN_BASE', plugin_basename(__FILE__));
-define('TBFE_PRO_PLUGIN_URL', plugin_dir_url(__FILE__));
-
-//add_action('plugins_loaded', 'tbfe_pro_load_textdomain');
-function tbfe_pro_load_textdomain() {
-    load_plugin_textdomain('tbfe', false, basename(dirname(__FILE__)) . '/languages/');
-}
-
 /**
- * Check Elementor plugin
+ * Plugin Name:       Theme Builder For Elementor
+ * Plugin URI:        https://blocks-wp.com/theme-builder-for-elementor/
+ * Description:       Build the header, footer, single posts and pages, archives and the 404 page of any theme with the free Elementor.
+ * Version:           2.0.0
+ * Requires at least: 6.5
+ * Requires PHP:      7.4
+ * Requires Plugins:  elementor
+ * Author:            Blocks WP
+ * Author URI:        https://blocks-wp.com/
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       theme-builder-for-elementor
+ * Elementor tested up to: 4.3.6
+ *
+ * @package TBFE
  */
-function tbfe_pro_check_for_elementor() {
-    // check for plugin using plugin name
-    if (in_array('elementor/elementor.php', apply_filters('active_plugins', get_option('active_plugins')))) {
-        return true;
-    }
-    return false;
+
+defined( 'ABSPATH' ) || exit;
+
+define( 'TBFE_VERSION', '2.0.0' );
+define( 'TBFE_FILE', __FILE__ );
+define( 'TBFE_PATH', plugin_dir_path( __FILE__ ) );
+define( 'TBFE_URL', plugin_dir_url( __FILE__ ) );
+define( 'TBFE_MIN_ELEMENTOR', '3.20.0' );
+
+if ( ! defined( 'TBFE_LIBRARY_URL' ) ) {
+	// Demo library (TBFE Demo Library plugin on the demos site).
+	define( 'TBFE_LIBRARY_URL', 'https://demos.blocks-wp.com/wp-json/tbfe-library/v1' );
 }
 
-/**
- * Check Elementor PRO plugin
- */
-function tbfe_pro_check_for_elementor_pro() {
-    // check for plugin using plugin name
-    if (in_array('elementor-pro/elementor-pro.php', apply_filters('active_plugins', get_option('active_plugins')))) {
-        return true;
-    }
-    return false;
-}
+require_once TBFE_PATH . 'includes/class-autoloader.php';
+TBFE\Autoloader::register();
 
-/**
- * Register Elementor features
- */
-if (tbfe_pro_check_for_elementor()) {
-    include_once( TBFE_PRO_PATH . 'lib/elementor/widgets.php' );
-    include_once( TBFE_PRO_PATH . 'lib/elementor/shortcode.php' );
-    include_once( TBFE_PRO_PATH . 'lib/elementor/sections/module.php' );
-    include_once( TBFE_PRO_PATH . 'lib/elementor/options.php' );
-    include_once( TBFE_PRO_PATH . 'lib/elementor/installers.php' );
-    include_once( TBFE_PRO_PATH . 'lib/metabox.php' );
-}
-include_once( TBFE_PRO_PATH . 'lib/templates/template-builder.php' );
+register_activation_hook( __FILE__, array( 'TBFE\\Plugin', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'TBFE\\Plugin', 'deactivate' ) );
 
-/**
- * Check if is edited by Elementor
- */
-function tbfe_is_elementor() {
-    global $post;
-    return \Elementor\Plugin::$instance->documents->get( $post->ID )->is_built_with_elementor();
-}
-
-/**
- * Register the Sidebar(s)
- */
-function tbfe_widgets_init() {
-    register_sidebar(
-		array(
-			'name' => esc_html__('Sidebar #1', 'tbfe'),
-			'id' => 'tbfe-sidebar-1',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<div class="widgettitle"><h3>',
-			'after_title' => '</h3></div>',
-		)
-    );
-    register_sidebar(
-		array(
-			'name' => esc_html__('Sidebar #2', 'tbfe'),
-			'id' => 'tbfe-sidebar-2',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<div class="widgettitle"><h3>',
-			'after_title' => '</h3></div>',
-		)
-    );
-    register_sidebar(
-		array(
-			'name' => esc_html__('Sidebar #3', 'tbfe'),
-			'id' => 'tbfe-sidebar-3',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<div class="widgettitle"><h3>',
-			'after_title' => '</h3></div>',
-		)
-    );
-}
-
-add_action('widgets_init', 'tbfe_widgets_init');
-
-/**
- * Add Metadata on plugin activation.
- */
-function tbfe_activate() {
-    add_site_option('tbfe_active_time', time());
-    add_option('tbfe_do_activation_redirect', true);
-    flush_rewrite_rules();
-}
-
-register_activation_hook(__FILE__, 'tbfe_activate');
-
-add_action('admin_init', 'tbfe_plugin_redirect');
-
-function tbfe_flush_update_permalinks($upgrader_object, $options) {
-
-	// The path to our plugin's main file
-	$our_plugin = plugin_basename( __FILE__ );
-	// If an update has taken place and the updated type is plugins and the plugins element exists
-	if( $options['action'] == 'update' && $options['type'] == 'plugin' && isset( $options['plugins'] ) ) {
-	 // Iterate through the plugins being updated and check if ours is there
-	 foreach( $options['plugins'] as $plugin ) {
-	  if( $plugin == $our_plugin ) {
-	   flush_rewrite_rules();
-	   break;
-	  }
-	 }
-	}
-
-}
-
-add_action( 'upgrader_process_complete', 'tbfe_flush_update_permalinks', 10, 2 );
-
-/**
- * Redirect after plugin activation
- */
-function tbfe_plugin_redirect() {
-    if (get_option('tbfe_do_activation_redirect', false)) {
-        delete_option('tbfe_do_activation_redirect');
-        if (!is_network_admin() || !isset($_GET['activate-multi'])) {
-            wp_redirect('admin.php?page=tbfe&tab=display_welcome_tab');
-        }
-    }
-}
-
-if (!tbfe_pro_check_for_elementor()) {
-    add_action('admin_notices', 'tbfe_plugin_requirements');
-}
-
-function tbfe_plugin_requirements() {
-    ?>
-    <div class="error">
-        <p><?php echo __('Theme Builder For Elementor is enabled but not effective. It requires Elementor in order to work.', 'tbfe') ?></p>
-    </div>
-    <?php
-}
-
-function tbfe_scripts() {
-    wp_enqueue_style('bootstrap', plugin_dir_url(__FILE__) . 'assets/css/bootstrap.css', array(), TBFE_PRO_CURRENT_VERSION);
-}
-
-add_action('wp_enqueue_scripts', 'tbfe_scripts', 9999);
+add_action( 'plugins_loaded', array( 'TBFE\\Plugin', 'instance' ) );

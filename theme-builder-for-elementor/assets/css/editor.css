@@ -1,0 +1,26 @@
+/* Theme Builder For Elementor – Elementor editor panel */
+.elementor-element .icon .eicon-theme-builder,
+#elementor-panel-category-tbfe .elementor-element .icon { color: #0e7c66; }
+#elementor-panel-category-tbfe .elementor-panel-category-title { color: #0e7c66; }
+
+/* PRO widgets: a small lock on the icon while they are locked (no PRO, or no active license) */
+#elementor-panel-category-tbfe-pro .elementor-element .icon,
+#elementor-panel-category-tbfe-pro .elementor-panel-category-title { color: #6d28d9; }
+.elementor-element .icon .tbfe-pro-locked { position: relative; opacity: 0.75; }
+.elementor-element .icon .tbfe-pro-locked::after {
+	content: "";
+	position: absolute;
+	right: -8px;
+	bottom: -4px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: #6d28d9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 11V8a5 5 0 0 1 10 0v3M6 11h12v9H6z' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linejoin='round'/%3E%3C/svg%3E") center / 9px no-repeat;
+	box-shadow: 0 0 0 2px #fff;
+}
+
+/* The PRO box in the panel (locked placeholder, or a PRO widget without an active license) */
+.tbfe-pro-panel { padding: 14px; border: 1px solid #ddd6fe; border-radius: 8px; background: #faf5ff; color: #3b0764; font-size: 12px; line-height: 1.5; }
+.tbfe-pro-panel strong { display: block; margin-bottom: 4px; font-size: 13px; }
+.tbfe-pro-panel p { margin: 0 0 8px; }
+.elementor-panel .tbfe-pro-panel .tbfe-pro-panel__button { display: inline-block; margin-top: 4px; padding: 8px 14px; border-radius: 6px; background: linear-gradient(135deg, #4338ca, #6d28d9 55%, #a21caf); color: #fff; font-weight: 600; }

@@ -1,0 +1,74 @@
+/* Theme Builder For Elementor – page templates */
+
+.tbfe-location-header,
+.tbfe-location-footer { display: block; width: 100%; }
+
+.tbfe-location-single,
+.tbfe-location-archive,
+.tbfe-location-404,
+.tbfe-location-content { display: block; width: 100%; }
+
+.tbfe-container,
+.tbfe-archive--boxed {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: var(--tbfe-container, 1140px);
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+/* Classic archive (version 1): the template repeated for each post, optional sidebar. */
+.tbfe-archive { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; padding-top: 40px; padding-bottom: 40px; }
+.tbfe-archive--full { padding-right: 20px; padding-left: 20px; }
+.tbfe-archive--sidebar { grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); }
+.tbfe-archive__posts { display: flex; flex-direction: column; gap: 30px; min-width: 0; }
+.tbfe-archive__item { margin: 0; }
+.tbfe-archive__sidebar { min-width: 0; }
+
+@media (max-width: 767px) {
+	.tbfe-archive--sidebar { grid-template-columns: minmax(0, 1fr); }
+}
+
+.tbfe-password { padding-top: 40px; padding-bottom: 40px; }
+
+/* Header behaviour (settings of the header template). */
+.tbfe-header--sticky,
+.tbfe-header--transparent {
+	z-index: 990;
+	transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.tbfe-header--sticky { position: sticky; top: var(--wp-admin--admin-bar--height, 0px); }
+.tbfe-header--transparent { position: absolute; top: var(--wp-admin--admin-bar--height, 0px); right: 0; left: 0; background-color: transparent; }
+.tbfe-header--transparent.tbfe-header--sticky { position: fixed; }
+.tbfe-header--sticky.is-scrolled { background-color: var(--tbfe-scrolled-bg, transparent); }
+.tbfe-header--shadow.is-scrolled { box-shadow: 0 6px 24px rgba(15, 23, 42, 0.1); }
+.tbfe-header--hide.is-hidden { transform: translateY(-110%); }
+.tbfe-header--shrink .elementor > .elementor-section,
+.tbfe-header--shrink .elementor > .e-con,
+.tbfe-header--shrink .elementor-element-populated,
+.tbfe-header--shrink .tbfe-site-logo img { transition: padding 0.3s ease, min-height 0.3s ease, max-height 0.3s ease; }
+.tbfe-header--shrink.is-scrolled .elementor > .elementor-section,
+.tbfe-header--shrink.is-scrolled .elementor > .e-con { padding-top: 4px !important; padding-bottom: 4px !important; }
+.tbfe-header--shrink.is-scrolled .elementor-element-populated { padding-top: 2px !important; padding-bottom: 2px !important; }
+.tbfe-header--shrink.is-scrolled .elementor-container { min-height: 0 !important; }
+.tbfe-header--shrink.is-scrolled .tbfe-site-logo img { width: auto !important; max-height: var(--tbfe-shrink-logo, 36px); }
+/* WordPress shows the admin bar not fixed on small screens. */
+@media (max-width: 600px) {
+	.tbfe-header--sticky,
+	.tbfe-header--transparent { top: 0; }
+}
+/* Sticky or transparent only on some devices: below the breakpoint the header is a normal one again. */
+@media (max-width: 1024px) {
+	.tbfe-header--transparent.tbfe-transparent-desktop { position: relative; top: auto; }
+	.tbfe-header--transparent.tbfe-transparent-desktop.tbfe-header--sticky { position: sticky; top: 0; }
+	.tbfe-location-header.tbfe-header--sticky.tbfe-sticky-desktop { position: relative; top: auto; }
+	.tbfe-location-header.tbfe-header--transparent.tbfe-sticky-desktop:not(.tbfe-transparent-desktop) { position: absolute; top: 0; }
+}
+@media (max-width: 767px) {
+	.tbfe-header--transparent.tbfe-transparent-desktop-tablet { position: relative; top: auto; }
+	.tbfe-header--transparent.tbfe-transparent-desktop-tablet.tbfe-header--sticky { position: sticky; top: 0; }
+	.tbfe-location-header.tbfe-header--sticky.tbfe-sticky-desktop-tablet { position: relative; top: auto; }
+	.tbfe-location-header.tbfe-header--transparent.tbfe-sticky-desktop-tablet.tbfe-transparent-all { position: absolute; top: 0; }
+}
