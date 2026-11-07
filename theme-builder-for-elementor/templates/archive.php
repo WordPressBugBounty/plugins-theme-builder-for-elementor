@@ -36,7 +36,7 @@ Theme_Support::page_start();
 					while ( have_posts() ) {
 						the_post();
 						?>
-						<article id="post-<?php the_ID(); ?>" <?php post_class( 'tbfe-archive__item' ); ?>>
+						<article id="post-<?php the_ID(); ?>" class="<?php echo esc_attr( implode( ' ', Renderer::post_class( 'tbfe-archive__item' ) ) ); ?>">
 							<?php Renderer::render_template( $tbfe_id ); ?>
 						</article>
 						<?php

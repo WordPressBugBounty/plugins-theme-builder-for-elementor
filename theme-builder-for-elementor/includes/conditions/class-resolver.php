@@ -131,9 +131,22 @@ class Resolver {
 			return 0;
 		}
 
+		// Products and the shop of WooCommerce: All singular / All archives of a blog Single or Archive template do
+		// not count there. The blog layout would take the add to cart and the shop loop away; the theme's shop (or the
+		// product templates of PRO) stay, unless a condition chooses them, like Products.
+		$shop = in_array( $location, array( 'single', 'archive' ), true ) && function_exists( 'is_woocommerce' ) && is_woocommerce();
+
 		$best       = 0;
 		$best_score = -1;
 		foreach ( $index[ $location ] as $id => $rules ) {
+			if ( $shop && in_array( Template::type( $id ), array( 'single', 'archive' ), true ) ) {
+				$rules = array_filter(
+					$rules,
+					static function ( $rule ) {
+						return 'exclude' === $rule['type'] || ! in_array( $rule['name'], array( 'singular', 'archive' ), true );
+					}
+				);
+			}
 			$score = self::rules_score( $rules );
 			if ( $score > $best_score ) {
 				$best       = (int) $id;

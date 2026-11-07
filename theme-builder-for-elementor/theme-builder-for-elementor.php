@@ -3,7 +3,7 @@
  * Plugin Name:       Theme Builder For Elementor
  * Plugin URI:        https://blocks-wp.com/theme-builder-for-elementor/
  * Description:       Build the header, footer, single posts and pages, archives and the 404 page of any theme with the free Elementor.
- * Version:           2.0.0
+ * Version:           2.0.1
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Requires Plugins:  elementor
@@ -19,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'TBFE_VERSION', '2.0.0' );
+define( 'TBFE_VERSION', '2.0.1' );
 define( 'TBFE_FILE', __FILE__ );
 define( 'TBFE_PATH', plugin_dir_path( __FILE__ ) );
 define( 'TBFE_URL', plugin_dir_url( __FILE__ ) );

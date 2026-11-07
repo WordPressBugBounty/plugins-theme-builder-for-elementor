@@ -6,6 +6,7 @@
  * @package TBFE
  */
 
+use TBFE\Render\Renderer;
 use TBFE\Render\Theme_Support;
 
 defined( 'ABSPATH' ) || exit;
@@ -17,7 +18,7 @@ Theme_Support::page_start();
 	while ( have_posts() ) {
 		the_post();
 		?>
-		<div <?php post_class( 'tbfe-page' ); ?>>
+		<div class="<?php echo esc_attr( implode( ' ', Renderer::post_class( 'tbfe-page' ) ) ); ?>">
 			<?php the_content(); ?>
 		</div>
 		<?php

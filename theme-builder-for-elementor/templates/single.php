@@ -21,7 +21,7 @@ Theme_Support::page_start();
 			continue;
 		}
 		?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class( 'tbfe-single' ); ?>>
+		<article id="post-<?php the_ID(); ?>" class="<?php echo esc_attr( implode( ' ', Renderer::post_class( 'tbfe-single' ) ) ); ?>">
 			<?php Renderer::render_location( 'single' ); ?>
 		</article>
 		<?php

@@ -8,6 +8,15 @@
 .tbfe-location-404,
 .tbfe-location-content { display: block; width: 100%; }
 
+/* Themes style their own #site-header, #site-footer, #content and main (flex rows, paddings, floats of a sidebar
+   layout); the elements of the plugin carry the same ids, so these rules beat the theme's. Position and background
+   stay free for the sticky and transparent header. */
+#site-header.tbfe-location,
+#site-footer.tbfe-location { display: block; float: none; clear: both; box-sizing: border-box; width: 100%; max-width: none; height: auto; min-height: 0; margin: 0; padding: 0; border: 0; }
+
+#content.tbfe-location,
+main.tbfe-location { float: none; clear: both; box-sizing: border-box; width: 100%; max-width: none; }
+
 .tbfe-container,
 .tbfe-archive--boxed {
 	box-sizing: border-box;

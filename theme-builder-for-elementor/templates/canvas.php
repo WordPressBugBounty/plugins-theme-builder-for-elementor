@@ -8,6 +8,10 @@
 
 defined( 'ABSPATH' ) || exit;
 
+// No header and footer of the theme either.
+TBFE\Render\Theme_Support::remove_theme_part( 'header' );
+TBFE\Render\Theme_Support::remove_theme_part( 'footer' );
+
 require __DIR__ . '/parts/document-start.php';
 
 while ( have_posts() ) {

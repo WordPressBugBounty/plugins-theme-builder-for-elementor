@@ -51,6 +51,37 @@ class References {
 	}
 
 	/**
+	 * Templates of this site that Elementor content refers to (Post Card, Section Template, slides of a Slider).
+	 *
+	 * @return int[]
+	 */
+	public static function ids( array $elements ) {
+		$ids = array();
+		foreach ( $elements as $element ) {
+			if ( ! is_array( $element ) ) {
+				continue;
+			}
+			$type     = isset( $element['widgetType'] ) ? $element['widgetType'] : '';
+			$settings = isset( $element['settings'] ) && is_array( $element['settings'] ) ? $element['settings'] : array();
+			if ( 'tbfe-posts' === $type && ! empty( $settings['card_template'] ) ) {
+				$ids[] = absint( $settings['card_template'] );
+			} elseif ( 'tbfe-template' === $type && ! empty( $settings['template_id'] ) ) {
+				$ids[] = absint( $settings['template_id'] );
+			} elseif ( 'tbfe-slider' === $type && ! empty( $settings['slides'] ) && is_array( $settings['slides'] ) ) {
+				foreach ( $settings['slides'] as $slide ) {
+					if ( ! empty( $slide['template_id'] ) ) {
+						$ids[] = absint( $slide['template_id'] );
+					}
+				}
+			}
+			if ( ! empty( $element['elements'] ) && is_array( $element['elements'] ) ) {
+				$ids = array_merge( $ids, self::ids( $element['elements'] ) );
+			}
+		}
+		return array_values( array_unique( array_filter( $ids ) ) );
+	}
+
+	/**
 	 * Template settings (the sidebar of a classic archive) pointing to a template of this site.
 	 */
 	public static function settings( array $settings ) {

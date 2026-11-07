@@ -474,14 +474,23 @@ class Library {
 			}
 		}
 
-		$posts = array_merge( wp_list_pluck( $pages, 'id' ), $templates );
-		foreach ( $posts as $post_id ) {
-			$document = \Elementor\Plugin::$instance->documents->get( (int) $post_id, false );
+		$posts = array_map( 'absint', array_merge( wp_list_pluck( $pages, 'id' ), $templates ) );
+		$next  = 0;
+		while ( $next < count( $posts ) ) {
+			$post_id  = $posts[ $next++ ];
+			$document = \Elementor\Plugin::$instance->documents->get( $post_id, false );
 			if ( ! $document ) {
 				continue;
 			}
 			$elements = $document->get_elements_data();
-			$changed  = false;
+			// Templates imported with the content (slides of a Slider, Section templates, Post Cards) get their links
+			// updated too.
+			foreach ( References::ids( $elements ) as $ref ) {
+				if ( ! in_array( $ref, $posts, true ) && Template::is_template( $ref ) && get_post_meta( $ref, '_tbfe_library_item', true ) ) {
+					$posts[] = $ref;
+				}
+			}
+			$changed = false;
 			$elements = self::walk(
 				$elements,
 				static function ( $element ) use ( $map, $result, &$changed ) {

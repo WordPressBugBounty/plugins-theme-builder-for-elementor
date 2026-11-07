@@ -574,7 +574,7 @@ class Posts extends Base {
 		echo '<div class="tbfe-posts' . ( $template ? ' tbfe-posts--template' : '' ) . '">';
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			echo '<article class="' . esc_attr( implode( ' ', get_post_class( 'tbfe-posts__item' ) ) ) . '">';
+			echo '<article class="' . esc_attr( implode( ' ', Renderer::post_class( 'tbfe-posts__item' ) ) ) . '">';
 			if ( $template ) {
 				Renderer::render_template( $template );
 			} else {

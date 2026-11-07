@@ -161,18 +161,42 @@ class Breadcrumbs extends Base {
 		return $items;
 	}
 
+	/**
+	 * Breadcrumbs of Yoast SEO or Rank Math, only when their breadcrumbs are switched on.
+	 * Empty string otherwise, so the built-in trail is used.
+	 */
+	private function seo_plugin_trail() {
+		if ( function_exists( 'yoast_breadcrumb' ) ) {
+			$enabled = current_theme_supports( 'yoast-seo-breadcrumbs' )
+				|| ( class_exists( 'WPSEO_Options' ) && \WPSEO_Options::get( 'breadcrumbs-enable', false ) );
+			if ( $enabled ) {
+				$html = (string) yoast_breadcrumb( '', '', false );
+				if ( '' !== trim( wp_strip_all_tags( $html ) ) ) {
+					return $html;
+				}
+			}
+		}
+		if ( function_exists( 'rank_math_get_breadcrumbs' ) ) {
+			$enabled = method_exists( '\RankMath\Helper', 'is_breadcrumbs_enabled' )
+				? \RankMath\Helper::is_breadcrumbs_enabled()
+				: current_theme_supports( 'rank-math-breadcrumbs' );
+			if ( $enabled ) {
+				$html = (string) rank_math_get_breadcrumbs();
+				if ( '' !== trim( wp_strip_all_tags( $html ) ) ) {
+					return $html;
+				}
+			}
+		}
+		return '';
+	}
+
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
 		if ( 'auto' === $settings['source'] && ! Context::is_template_preview() ) {
-			if ( function_exists( 'yoast_breadcrumb' ) ) {
-				yoast_breadcrumb( '<nav class="tbfe-breadcrumbs" aria-label="' . esc_attr__( 'Breadcrumbs', 'theme-builder-for-elementor' ) . '">', '</nav>' );
-				return;
-			}
-			if ( function_exists( 'rank_math_the_breadcrumbs' ) ) {
-				echo '<nav class="tbfe-breadcrumbs" aria-label="' . esc_attr__( 'Breadcrumbs', 'theme-builder-for-elementor' ) . '">';
-				rank_math_the_breadcrumbs();
-				echo '</nav>';
+			$seo = $this->seo_plugin_trail();
+			if ( '' !== $seo ) {
+				echo '<nav class="tbfe-breadcrumbs" aria-label="' . esc_attr__( 'Breadcrumbs', 'theme-builder-for-elementor' ) . '">' . wp_kses_post( $seo ) . '</nav>';
 				return;
 			}
 		}

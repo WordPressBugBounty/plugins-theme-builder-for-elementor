@@ -4,7 +4,7 @@ Tags: elementor, theme builder, header footer, templates, archive
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,7 +74,7 @@ The administration of the plugin (build/admin.js, build/admin.css) is built from
 
 == External services ==
 
-The Template Library and Websites Import load their designs from our demo site demos.blocks-wp.com (https://demos.blocks-wp.com/wp-json/tbfe-library/v1/):
+The Template Library and Websites Import load their designs from our demo site demos.blocks-wp.com (https://demos.blocks-wp.com/):
 
 * The list of the templates and websites is loaded once a day (in the background with WP-Cron, or when you open the Template Library or Websites Import). You can refresh it by hand at most every 6 hours. Without a connection the last loaded list is used.
 * A demo file is downloaded only when you import it, and it is checked against the checksum of the list.
@@ -137,6 +137,15 @@ Use only one theme builder for the same part of the site.
 8. Theme Builder PRO: WooCommerce shop, popups and mega menus, shown locked in the free plugin
 
 == Changelog ==
+
+= 2.0.1 =
+* Fix: after a Websites Import the buttons in sliders, section templates and post cards link to your site, not to the demo site.
+* Fix: the Breadcrumbs widget uses the breadcrumbs of Yoast SEO or Rank Math only when they are switched on there, otherwise its own trail.
+* Fix: Single and Archive templates for the blog are no longer used for WooCommerce products, the shop and product categories.
+* Fix: themes that print their own header or footer through hooks (e.g. Envo One) no longer show it next to the header or footer of the plugin.
+* Fix: header, footer and content of the plugin are no longer changed by theme styles (e.g. Royal Elementor Kit, PopularFX).
+* Fix: on pages the theme renders, its content container is kept with the header and footer of the plugin.
+* Fix: post cards of the Posts widget are no longer boxed again by the theme (e.g. Astra).
 
 = 2.0.0 =
 * New: completely rewritten plugin with a new administration.

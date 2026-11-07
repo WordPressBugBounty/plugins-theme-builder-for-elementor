@@ -159,6 +159,62 @@ class Renderer {
 	 *
 	 * @param int $id Template ID.
 	 */
+	/**
+	 * Classes of the post element in the plugin's layouts: get_post_class() without the post_class filters of the
+	 * theme. Themes add their own card and grid classes there (Astra: ast-article-post, ast-grid-common-col) and
+	 * style them as boxes, which put a theme box around the cards of the Posts widget. Plugins (WooCommerce) stay.
+	 *
+	 * @param string $class Own class.
+	 * @return string[]
+	 */
+	public static function post_class( $class = '' ) {
+		global $wp_filter;
+		$removed = array();
+		if ( isset( $wp_filter['post_class'] ) ) {
+			$dirs = array_unique( array( wp_normalize_path( get_template_directory() ) . '/', wp_normalize_path( get_stylesheet_directory() ) . '/' ) );
+			foreach ( $wp_filter['post_class']->callbacks as $priority => $callbacks ) {
+				foreach ( $callbacks as $callback ) {
+					$file = self::callback_file( $callback['function'] );
+					foreach ( $dirs as $dir ) {
+						if ( $file && 0 === strpos( $file, $dir ) ) {
+							$removed[] = array( $callback['function'], $priority, $callback['accepted_args'] );
+							break;
+						}
+					}
+				}
+			}
+		}
+		foreach ( $removed as $filter ) {
+			remove_filter( 'post_class', $filter[0], $filter[1] );
+		}
+		$classes = get_post_class( $class );
+		foreach ( $removed as $filter ) {
+			add_filter( 'post_class', $filter[0], $filter[1], $filter[2] );
+		}
+		return $classes;
+	}
+
+	/**
+	 * File that defines a callback ('' when unknown).
+	 */
+	private static function callback_file( $callback ) {
+		try {
+			if ( is_string( $callback ) && false !== strpos( $callback, '::' ) ) {
+				$callback = explode( '::', $callback, 2 );
+			}
+			if ( is_array( $callback ) && 2 === count( $callback ) ) {
+				$reflection = new \ReflectionMethod( $callback[0], $callback[1] );
+			} elseif ( $callback instanceof \Closure || ( is_string( $callback ) && function_exists( $callback ) ) ) {
+				$reflection = new \ReflectionFunction( $callback );
+			} else {
+				return '';
+			}
+			return wp_normalize_path( (string) $reflection->getFileName() );
+		} catch ( \ReflectionException $e ) {
+			return '';
+		}
+	}
+
 	public static function render_template( $id ) {
 		$id = (int) $id;
 		if ( ! $id || ! Template::is_template( $id ) ) {
